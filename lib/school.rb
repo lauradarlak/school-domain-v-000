@@ -9,22 +9,22 @@ class School
   end
 
   def add_student(student, grade)
-    if @roster.keys.include?(grade)
-        @roster[grade] << student
+    if roster.keys.include?(grade)
+        roster[grade] << student
     else
-      @roster[grade] = []
-      @roster[grade] << student
+      roster[grade] = []
+      roster[grade] << student
     end
   end
 
   def grade(grade)
-    @roster[grade]
+    roster[grade]
   end
 
   def sort
-    @roster.each do |grade, student_array|
+    roster.each do |grade, student_array|
       student_array.sort!
-      @roster
+      roster
     end
   end
 end
